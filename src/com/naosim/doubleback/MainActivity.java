@@ -17,6 +17,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+		// 1. 生成
 		mDoubleBackFucker = new DoubleBackFucker(new DoubleBackToast(this, "もう一度押すと終了します"));
 	}
 	
@@ -24,9 +25,11 @@ public class MainActivity extends Activity {
 	protected void onStart() {
 		super.onStart();
 		
+		// 2. onStartでnoStartActivity()を呼ぶ
 		mDoubleBackFucker.onStartActivity();
 	}
 	
+	// 3. onKeyDownを実装する
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		if(mDoubleBackFucker.onKeyDown(keyCode, event)) return true;

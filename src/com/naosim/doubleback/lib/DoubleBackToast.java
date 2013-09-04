@@ -3,6 +3,11 @@ package com.naosim.doubleback.lib;
 import android.content.Context;
 import android.widget.Toast;
 
+/**
+ * onFirstBackが呼ばれたときにトーストを表示する
+ * @author nao_pillows
+ *
+ */
 public class DoubleBackToast implements DoubleBackFucker.Listener{
 	private Context mContext;
 	private int mMessageId;

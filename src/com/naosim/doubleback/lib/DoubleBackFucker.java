@@ -2,10 +2,18 @@ package com.naosim.doubleback.lib;
 
 import android.view.KeyEvent;
 
+/**
+ * バックが押された回数でハンドリングする
+ * @author nao_pillows
+ *
+ */
 public class DoubleBackFucker {
 	private Listener mListener;
 	private int mBackCount = 0;
 
+	/**
+	 * @param l バックがキャンセルされたときに呼ばれるリスナ
+	 */
 	public DoubleBackFucker(Listener l) {
 		mListener = l;
 		mBackCount = 0;
