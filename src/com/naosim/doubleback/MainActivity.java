@@ -19,13 +19,6 @@ public class MainActivity extends Activity {
 		
 		mDoubleBackFucker = new DoubleBackFucker(new DoubleBackToast(this, "もう一度押すと終了します"));
 	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
 	
 	@Override
 	protected void onStart() {
